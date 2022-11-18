@@ -57,7 +57,7 @@ export default function Masuk() {
               </div>
               <div className="mb-3">
                 <label htmlFor="password" className="form-label">Password*</label>
-                <input type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} id="password" placeholder="*****" required />
+                <input type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} id="password" placeholder="*****" />
                 <div className="invalid-feedback">{errors.password?.message}</div>
               </div>
 

@@ -20,6 +20,7 @@ export default function Register() {
 	// form validation rules
 	const validationSchema = Yup.object().shape({
 		full_name: Yup.string().required("Full Name is required"),
+		user_name: Yup.string().required("Username is required"),
 		email: Yup.string()
 			.email("Invalid email address")
 			.required("Email is required"),
@@ -74,9 +75,8 @@ export default function Register() {
 								</label>
 								<input
 									type="text"
-									className={`form-control ${
-										errors.full_name ? "is-invalid" : ""
-									}`}
+									className={`form-control ${errors.full_name ? "is-invalid" : ""
+										}`}
 									id="full_name"
 									placeholder="Jhon Doe"
 									{...register("full_name")}
@@ -105,9 +105,8 @@ export default function Register() {
 								</label>
 								<input
 									type="username"
-									className={`form-control ${
-										errors.user_name ? "is-invalid" : ""
-									}`}
+									className={`form-control ${errors.user_name ? "is-invalid" : ""
+										}`}
 									id="user_name"
 									aria-describedby="usernameHelp"
 									placeholder="Username"
@@ -123,9 +122,8 @@ export default function Register() {
 								</label>
 								<input
 									type="password"
-									className={`form-control ${
-										errors.password ? "is-invalid" : ""
-									}`}
+									className={`form-control ${errors.password ? "is-invalid" : ""
+										}`}
 									id="password"
 									placeholder="*****"
 									{...register("password")}
@@ -140,9 +138,8 @@ export default function Register() {
 								</label>
 								<input
 									type="text"
-									className={`form-control ${
-										errors.phone_number ? "is-invalid" : ""
-									}`}
+									className={`form-control ${errors.phone_number ? "is-invalid" : ""
+										}`}
 									id="phone_number"
 									placeholder="08123468798"
 									{...register("phone_number")}
@@ -173,9 +170,8 @@ export default function Register() {
 								</label>
 								<input
 									type="text"
-									className={`form-control ${
-										errors.address ? "is-invalid" : ""
-									}`}
+									className={`form-control ${errors.address ? "is-invalid" : ""
+										}`}
 									id="address"
 									placeholder="Jl. Garuda No. 76 Jakarta Selatan"
 									{...register("address")}
