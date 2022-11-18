@@ -422,15 +422,16 @@ OUR TEAMS
 	transform: translate(0, -65px);
 }
 
-.team-card .image .img-fluid {
+.team-card .image img {
 	width: 100%;
+	/* object-fit: contain; */
 	transition: 0.4s ease-in-out;
 	border-radius: 50%;
 	cursor: pointer;
 	border: 6px solid var(--green);
 }
 
-.team-card:hover .image .img-fluid {
+.team-card:hover .image img {
 	border-radius: 10px;
 }
 

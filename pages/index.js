@@ -1,11 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import heroImage from '../public/images/heros/hero-image.png'
 import aboutImage from '../public/images/about-img.png'
 import faqImage from '../public/images/faq.png'
-import arifImage from '../public/teams/arif.jpg'
-import suryaImage from '../public/teams/surya.jpg'
-import defaultImage from '../public/teams/default.png'
-import yudaImage from '../public/teams/yuda.jpeg'
+import arifImage from '../public/images/teams/arif.jpg'
+import suryaImage from '../public/images/teams/surya.jpg'
+import defaultImage from '../public/images/teams/default.png'
+import yudaImage from '../public/images/teams/yuda.jpeg'
 import Link from 'next/link'
 export default function Home() {
   return (
@@ -163,6 +164,7 @@ export default function Home() {
           <div className="row row-team mt-4">
             <div className="team-card">
               <div className="image">
+                {/* <img title="yuda anugrah" src="/images/teams/yuda.jpeg" className='img-fluid' alt="yuda" /> */}
                 <Image
                   src={yudaImage}
                   title="Yuda Anugrah"
@@ -192,6 +194,7 @@ export default function Home() {
             </div>
             <div className="team-card">
               <div className="image">
+                {/* <img title="surya saputra" className='img-fluid' src="/images/teams/surya.jpg" alt="surya" /> */}
                 <Image
                   src={suryaImage}
                   title="Surya Maulana Saputra"
@@ -221,6 +224,7 @@ export default function Home() {
             </div>
             <div className="team-card">
               <div className="image">
+                {/* <img title="arif rizqi" className='img-fluid' src="/images/teams/arif.jpg" alt="arif" /> */}
                 <Image
                   src={arifImage}
                   title="Arif Rizqi"
@@ -250,6 +254,7 @@ export default function Home() {
             </div>
             <div className="team-card">
               <div className="image">
+                {/* <img title="annas setiawan" className='img-fluid' src="./images/teams/default.png" alt="annas" /> */}
                 <Image
                   src={defaultImage}
                   title="Annas Setiawan"
@@ -279,7 +284,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </div>
+      </div >
 
 
     </>
