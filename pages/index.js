@@ -21,10 +21,9 @@ export default function Home() {
          <div className="col-md-6">
               <div className="img-home">
               <Image
-              src="/../public/images/heros/hero-image.png"
-              width={600}
-              height={500}
+              src={heroImage}
               alt="Hero Image"
+              className='img-fluid'
               >
               </Image>
               </div>
@@ -37,18 +36,16 @@ export default function Home() {
 
     <div className="container">
     <section className="about" id="about">
-      <h2 className="text-center">Tentang <span>DiBagi.in</span></h2>
+      <h2 className="text-center">Tentang <span className='title-green'>DiBagi.in</span></h2>
       <div className="row">
           <div className="col-md-6">
               <div className="img-about">
               <Image
-              src="/../public/images/about-img.png"
-              width={600}
-              height={500}
+              src={aboutImage}
+              className='img-fluid'
               alt="About Image"
               >
               </Image>
-                  {/* <img src="./images/about-img.png" alt="about img"> */}
               </div>
           </div>
           <div className="col-md-6 info-about">
@@ -90,14 +87,13 @@ export default function Home() {
 
         <div className="container">
     <section className="about" id="faq">
-      <h2 className="text-center">Yang Sering <span>Ditanyakan</span></h2>
+      <h2 className="text-center">Yang Sering <span className='title-green' >Ditanyakan</span></h2>
       <div className="row">
           <div className="col-md-6">
               <div className="img-about">
                <Image
-              src="/../public/images/faq.png"
-              width={600}
-              height={500}
+              src={faqImage}
+              className='img-fluid'
               alt="FAQ Image"
               >
               </Image>
@@ -111,7 +107,7 @@ export default function Home() {
               <div className="accordion-item">
                 <h2 className="accordion-header" id="headingOne">
                   <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <span>Apa itu DiBagi.in?</span>
+                    <span className='title-green'>Apa itu DiBagi.in?</span>
                   </button>
                 </h2>
                 <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -123,7 +119,7 @@ export default function Home() {
               <div className="accordion-item">
                 <h2 className="accordion-header" id="headingTwo">
                   <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <span>Bagaimana cara memberikan donasi?</span>
+                    <span className='title-green'>Bagaimana cara memberikan donasi?</span>
                   </button>
                 </h2>
                 <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -135,7 +131,7 @@ export default function Home() {
               <div className="accordion-item">
                 <h2 className="accordion-header" id="headingThree">
                   <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <span>Bagaimana cara menerima donasi?</span>
+                    <span className='title-green'>Bagaimana cara menerima donasi?</span>
                   </button>
                 </h2>
                 <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">

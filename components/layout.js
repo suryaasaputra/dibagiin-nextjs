@@ -1,11 +1,15 @@
 import Link from "next/link";
 
 const Header = () => {
+  function handleHamburgerButtonClick(){
+    const drawer = document.querySelector('#navigationDrawer');
+    drawer.classList.toggle('open');
+  }
   return (
     <header className="app-bar">
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="app-bar__menu">
-        <button id="hamburgerButton">☰</button>
+        <button onClick={handleHamburgerButtonClick} id="hamburgerButton">☰</button>
       </div>
       <div className="app-bar__brand">
       <Link href="/" className="navbar-brand logo" ><i className="fas fa-heart"></i> Dibagi<span>.in</span></Link>
@@ -32,12 +36,12 @@ const Footer = () => {
     </>
   );
 };
-  
+
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      {children}
+        {children}
       <Footer />
     </>
   );

@@ -162,6 +162,10 @@ a {
 	margin-top: 3rem;
 }
 
+.title-green {
+	color: var(--green);
+}
+
 .home .row .info-home {
 	display: flex;
 	justify-content: center;

@@ -5,6 +5,10 @@ import Head from "next/head";
 import Layout from '../components/layout';
 
 function MyApp({ Component, pageProps }) {
+  function handleMainContentClick(){
+    const drawer = document.querySelector('#navigationDrawer');
+    drawer.classList.remove('open');
+  }
   return (
 <>
   <Head>
@@ -12,7 +16,9 @@ function MyApp({ Component, pageProps }) {
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
   </Head>
   <Layout>
+    <main onClick={handleMainContentClick} id="mainContent">
     <Component {...pageProps} />
+    </main>
   </Layout>
 </>
 );
