@@ -30,6 +30,9 @@ export default function Home() {
                   src={heroImage}
                   alt="Hero Image"
                   className='img-fluid'
+                  loading='eager'
+                  priority
+
                 >
                 </Image>
               </div>
