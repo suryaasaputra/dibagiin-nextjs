@@ -19,7 +19,7 @@ export default function Masuk() {
 
   // form validation rules 
   const validationSchema = Yup.object().shape({
-    email: Yup.string().required('Email is required'),
+    email: Yup.string().email("Invalid email address").required('Email is required'),
     password: Yup.string().required('Password is required')
   });
   const formOptions = { resolver: yupResolver(validationSchema) };
@@ -52,8 +52,8 @@ export default function Masuk() {
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-4">
                 <label htmlFor="email" className="form-label">Email*</label>
-                <input type="email" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} id="email" aria-describedby="emailHelp" placeholder="you@email.com" />
-                <div className="invalid-feedback">{errors.username?.message}</div>
+                <input type="text" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} id="email" aria-describedby="emailHelp" placeholder="you@email.com" />
+                <div className="invalid-feedback">{errors.email?.message}</div>
               </div>
               <div className="mb-3">
                 <label htmlFor="password" className="form-label">Password*</label>
@@ -82,7 +82,7 @@ export default function Masuk() {
                 <div className="alert alert-danger mt-3 mb-0">{errors.apiError?.message}</div>
               }
               <div className="mt-3">
-                <label>Belum Punya Akun ? <Link href="/register" className="link">Daftar</Link></label>
+                <label>Belum Punya Akun ? <Link href="/registrasi" className="link">Daftar</Link></label>
               </div>
             </form>
           </div>
