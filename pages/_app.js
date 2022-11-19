@@ -1,6 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/main.css";
-import "../styles/responsive.css";
+import "../styles/main.scss";
+import "../styles/responsive.scss";
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -16,7 +15,7 @@ function MyApp({ Component, pageProps }) {
 	const router = useRouter();
 	const [authorized, setAuthorized] = useState(false);
 	useEffect(() => {
-		// import("bootstrap/dist/js/bootstrap.bundle");
+		import("bootstrap/dist/js/bootstrap.bundle");
 		// run auth check on initial load
 		authCheck(router.asPath);
 
